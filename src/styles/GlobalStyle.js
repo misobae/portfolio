@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     font-weight: 400;
     font-family: "Source Sans 3", sans-serif;
+    background-color: #090b16;
   }
 
   svg {
