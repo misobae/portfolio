@@ -1,7 +1,12 @@
-function App() {
+import React, { Suspense } from 'react';
+import Scene from "./components/Scene/Scene";
+
+const App = () => {
   return (
-    <div>Hello</div>
+    <Suspense>
+      <Scene />
+    </Suspense>
   );
-}
+};
 
 export default App;
