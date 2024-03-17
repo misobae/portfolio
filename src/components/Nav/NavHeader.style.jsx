@@ -7,10 +7,17 @@ export const Wrapper = styled(motion.nav)`
   right: 5%;
   top: 5%;
   display: flex;
-  gap: 24px;
+  gap: 1.5em;
+  font-size: 15px;
   
   a {
     color: #fff;
-    font-size: 16px;
+
+    &:not(:last-child)::after {
+      content: "|";
+      display: inline-block;
+      margin-left: 1.5em;
+      font-weight: 300;
+    }
   }
 `;

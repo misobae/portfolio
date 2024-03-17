@@ -4,7 +4,11 @@ import { Wrapper } from "./NavFooter.style";
 
 function NavFooter() {
   return (
-    <Wrapper>
+    <Wrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+    >
       <Nav />
     </Wrapper>
   )
