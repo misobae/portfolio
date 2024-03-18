@@ -5,10 +5,10 @@ function Nav() {
 
   return (
     <>
-      {location.pathname === "/" ? "" : <Link to="/">Home</Link>}
-      <Link to="/about">About</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/experience">Experience</Link>
+      {location.pathname === "/" ? "" : <Link to="/">HOME</Link>}
+      <Link to="/about">ABOUT</Link>
+      <Link to="/projects">PROJECTS</Link>
+      <Link to="/experience">EXPERIENCE</Link>
     </>
   )
 }
