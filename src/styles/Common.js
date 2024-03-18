@@ -1,18 +1,18 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Content = styled(motion.div)`
-  opacity: 0;
+export const Wrapper = styled.div`
   position: absolute;
-  z-index: 0;
-  top: 0px;
-  left: 0px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100vw;
+  max-width: 1920px;
+  min-height: 100%;
+  margin: 0 auto;
   padding: 5% 5% 10vw;
-  transform: translate3d(0, 20%, 0);
   transition: .8s ease-in-out;
-
-  p {
-    color: #fff;
-  }
 `;
+
+export const Content = styled(motion.div)``;
