@@ -11,7 +11,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Lamp(props) {
-  const { nodes, materials } = useGLTF('/lamp/scene.gltf')
+  const { nodes, materials } = useGLTF('./lamp/scene.gltf')
   return (
     <>
       <group {...props} dispose={null}>

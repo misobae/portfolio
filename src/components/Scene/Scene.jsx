@@ -72,7 +72,7 @@ function Scene() {
       
       <AnimatedCenter scale={textScale} position={[0, -0.2, 0]} >
         <Text3D
-          font="/fonts/Source_Sans_3_SemiBold_Regular.json"
+          font="./fonts/Source_Sans_3_SemiBold_Regular.json"
           size={1.2}
           height={0.9}
           curveSegments={50}
