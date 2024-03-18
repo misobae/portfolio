@@ -10,22 +10,26 @@ import Projects from "./routes/Projects";
 import Experience from "./routes/Experience";
 
 import Scene from "./components/Scene/Scene";
+import NavFooter from './components/Nav/NavFooter';
+import NavHeader from './components/Nav/NavHeader';
 
 const App = () => {
   const location = useLocation();
-  const [isLight, setIsLight] = useRecoilState(lightState);
-
+  const [isHome, setIsHome] = useRecoilState(lightState);
+  
   useEffect(() => {
-    if (location.pathname === '/' && !isLight) {
-      setIsLight(1);
-    } else if (location.pathname !== '/' && isLight) {
-      setIsLight(0);
+    if (location.pathname === '/' && !isHome) {
+      setIsHome(1);
+    } else if (location.pathname !== '/' && isHome) {
+      setIsHome(0);
     }
-  }, [location.pathname, setIsLight, isLight]);
+  }, [location.pathname, setIsHome, isHome]);
 
   return (
     <>
-      <AnimatePresence mode="wait">   
+      {isHome ? <NavFooter/> : <NavHeader/>}
+
+      <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={ <Home /> } />
           <Route path="/about" element={ <About /> } />
