@@ -4,7 +4,7 @@ import reset from 'styled-reset'
 export const GlobalStyle = createGlobalStyle`
   ${reset}
 
-  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
 
   * {
     box-sizing: border-box;
@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     font-weight: 400;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "Schibsted Grotesk", sans-serif;
     background-color: #090b16;
   }
 
