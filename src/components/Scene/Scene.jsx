@@ -15,7 +15,7 @@ import Points from './Points';
 const AnimatedCenter = animated(Center);
 const AnimatedLamp = animated(Lamp);
 
-const name = (type) => `./texture/Metal032_1K-JPG_${type}.jpg`;
+const name = (type) => `${process.env.PUBLIC_URL}/texture/Metal032_1K-JPG_${type}.jpg`;
 
 function Scene() {
   const isLight = useRecoilValue(lightState);
@@ -72,7 +72,7 @@ function Scene() {
       
       <AnimatedCenter scale={textScale} position={[0, -0.2, 0]} >
         <Text3D
-          font="./fonts/Source_Sans_3_SemiBold_Regular.json"
+          font={`${process.env.PUBLIC_URL}//fonts/Source_Sans_3_SemiBold_Regular.json`}
           size={1.2}
           height={0.9}
           curveSegments={50}
