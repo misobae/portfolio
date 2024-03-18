@@ -3,6 +3,7 @@ import galleryItems from "../constants/galleryItems";
 
 import Title from '../components/Common/Title';
 import GalleryItem from '../components/Gallery/GalleryItem';
+import Footer from "../components/Footer/Footer";
 
 import { Wrapper, Content } from "../styles/Common";
 import { GalleryWrap } from "../styles/Gallery";
@@ -11,7 +12,7 @@ function Projects() {
   return (
     <>
       <Wrapper>
-        <Title title="PROJECTS" />
+        <Title title="Projects" />
         <Content
           variants={PageVars}
           initial="init"
@@ -29,6 +30,7 @@ function Projects() {
             ))}
           </GalleryWrap>
         </Content>
+        <Footer />
       </Wrapper>
     </>
   )

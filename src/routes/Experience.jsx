@@ -1,23 +1,24 @@
-import NavHeader from "../components/Nav/NavHeader";
-
 import { PageVars } from "../constants/pageVariants";
 
-import { Content } from "../styles/Common";
+import { Wrapper, Content } from "../styles/Common";
+
+import Title from '../components/Common/Title';
+import Footer from "../components/Footer/Footer";
 
 function Experience() {
   return (
     <>
-      <NavHeader />
-      <Content
-        variants={PageVars}
-        initial="init"
-        animate="ani"
-        exit="exit"
-      >
-        <p>
-          Experience
-        </p>
-      </Content>
+      <Wrapper>
+        <Title title="Experience" />
+        <Content
+          variants={PageVars}
+          initial="init"
+          animate="ani"
+          exit="exit"
+        >
+        </Content>
+        <Footer />
+      </Wrapper>
     </>
   )
 }
