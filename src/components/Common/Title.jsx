@@ -2,14 +2,13 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const MenuTitle = styled(motion.div)`
-  opacity: 0.3;
-  width: 100%;
-  padding: 56px 0 64px;
-  color: #fff;
-  font-size: 180px;
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  text-align: center;
+    width: 100%;
+    padding: 56px 0 64px;
+    color: #fff;
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-align: center;
 `;
 
 function Title({ title }) {
@@ -21,9 +20,9 @@ function Title({ title }) {
         transition: { type: 'ease', duration: 0.35 }
       }}
       animate={{
-        opacity: 0.3,
+        opacity: 0.75,
         transform: "perspective(500px) translate3d(0, 0px, 40px)",
-        transition: { type: 'ease', duration: 0.5, delay: 0.5 }
+        transition: { type: 'ease', duration: 0.35, delay: 0.3 }
       }}
       exit={{
         opacity: 0,
