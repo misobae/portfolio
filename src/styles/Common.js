@@ -19,3 +19,25 @@ export const Content = styled(motion.div)`
   min-height: 100%;
   margin: 0 auto;
 `;
+
+export const ContentTitle = styled(motion.h2)`
+  margin-bottom: 0.5em;
+  padding: 2.5em 0 0.5em;
+  border-bottom: 1px solid var(--color-white);
+  font-size: var(--text-lg);
+  font-weight: 600;
+`;
+
+export const CodeBox = styled(motion.div)`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+`;
+
+export const Code = styled(motion.span)`
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  background-color: rgb(240 246 255 / 30%);
+  font-size: var(--text-md);
+`;
