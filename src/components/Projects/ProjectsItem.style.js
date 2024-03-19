@@ -6,7 +6,6 @@ export const Item = styled(motion.div)`
   position: relative;
   height: 0;
   padding-top: 55%;
-  background-color: #ddd;
   cursor: pointer;
   
   img {
@@ -42,12 +41,12 @@ export const Item = styled(motion.div)`
 
     .title__sub {
       margin-bottom: 0.5em;
-      color: #b3b3b3;
+      color: var(--color-gray);
       font-size: 14px;
     }
     .title__main {
-      color: #fff;
-      font-size: 16px;
+      color: var(--color-white);
+      font-size: var(--text-sm);
     }
   }
   &:hover .title {

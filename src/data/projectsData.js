@@ -1,4 +1,4 @@
-const galleryItems = [
+const projectsData = [
   {
     imgUrl: "./images/eg_img_1.jpg",
     subTitle: "Subtitle | Subtitle | Subtitle",
@@ -21,4 +21,4 @@ const galleryItems = [
   },
 ];
 
-export default galleryItems;
+export default projectsData;

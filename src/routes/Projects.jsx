@@ -1,12 +1,12 @@
 import { PageVars } from "../constants/pageVariants";
-import galleryItems from "../constants/galleryItems";
+import projectsData from "../data/projectsData";
 
 import Title from '../components/Common/Title';
-import GalleryItem from '../components/Gallery/GalleryItem';
+import ProjectsItem from '../components/Projects/ProjectsItem';
+import { ProjectsWrap } from "../components/Projects/Projects.style";
 import Footer from "../components/Footer/Footer";
 
 import { Wrapper, Content } from "../styles/Common";
-import { GalleryWrap } from "../styles/Gallery";
 
 function Projects() {
   return (
@@ -19,16 +19,16 @@ function Projects() {
           animate="ani"
           exit="exit"
         >
-          <GalleryWrap>
-            {galleryItems.map((item, i) => (
-              <GalleryItem
+          <ProjectsWrap>
+            {projectsData.map((item, i) => (
+              <ProjectsItem
                 key={`item${i}`}
                 imgUrl={item.imgUrl}
                 subTitle={item.subTitle}
                 mainTItle={item.mainTitle}
               />
             ))}
-          </GalleryWrap>
+          </ProjectsWrap>
         </Content>
         <Footer />
       </Wrapper>

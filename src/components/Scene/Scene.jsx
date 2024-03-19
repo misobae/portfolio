@@ -58,7 +58,7 @@ function Scene() {
   ]);
 
   return (
-    <Canvas camera={{ position: [0, 1, 5], fov: 15 }}>
+    <Canvas camera={{ position: [0, 1, 5], fov: 15 }} style={{ width: '100vw', height: '100vh' }}>
       <ambientLight intensity={1} color="#fff" />
 
       <a.spotLight

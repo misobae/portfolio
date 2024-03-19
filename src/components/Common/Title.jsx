@@ -2,9 +2,8 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const MenuTitle = styled(motion.div)`
-    width: 100%;
     padding: 56px 0 64px;
-    color: #fff;
+    color: var(--color-white);
     font-size: 120px;
     font-weight: 700;
     letter-spacing: -0.01em;

@@ -1,6 +1,6 @@
-import { Item } from './GalleryItem.style';
+import { Item } from './ProjectsItem.style';
 
-function GalleryItem({ onClick, layoutId, imgUrl, subTitle, mainTItle }) {
+function ProjectsItem({ onClick, layoutId, imgUrl, subTitle, mainTItle }) {
   return (
     <Item onClick={onClick} layoutId={layoutId}>
       <img src={imgUrl} alt="" />
@@ -13,4 +13,4 @@ function GalleryItem({ onClick, layoutId, imgUrl, subTitle, mainTItle }) {
   )
 }
 
-export default GalleryItem;
+export default ProjectsItem;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const Wrapper = styled.div`
+  overflow: hidden;
   position: absolute;
   z-index: 1;
   top: 0;

@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 export const MotionText = styled(motion.p)`
   margin-bottom: 1.5em;
-  color: #fff;
-  font-size: 16px;
+  color: var(--color-white);
+  font-size: var(--text-sm);
   line-height: 1.5;
 `;
 

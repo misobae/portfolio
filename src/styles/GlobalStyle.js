@@ -4,7 +4,15 @@ import reset from 'styled-reset'
 export const GlobalStyle = createGlobalStyle`
   ${reset}
 
-  @import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+  :root {
+		--color-black: #090b16;
+		--color-white: #e6edf3;
+		--color-gray: #b3b3b3;
+
+		--text-sm: 16px;
+		--text-md: 24px;
+		--text-lg: 32px;
+	}
 
   * {
     box-sizing: border-box;
@@ -17,10 +25,11 @@ export const GlobalStyle = createGlobalStyle`
   #root,
   main {
     width: 100%;
-    height: 100%;
+    background-color: var(--color-black);
+    color: var(--color-white);
     font-weight: 400;
     font-family: "Schibsted Grotesk", sans-serif;
-    background-color: #090b16;
+    font-size: var(--text-sm);
   }
 
   svg {

@@ -5,11 +5,11 @@ export const Wrapper = styled.div`
   z-index: 1;
   margin-top: 5%;
   padding: 16px 0;
-  border-top: 1px solid #fff;
+  border-top: 1px solid var(--color-white);
 `;
 
 export const Copyright = styled.div`
-  color: #fff;
+  color: var(--color-white);
   font-size: 16px;
   strong {
     font-size: 18px;

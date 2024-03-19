@@ -11,7 +11,7 @@ export const Wrapper = styled(motion.nav)`
   font-size: 15px;
   
   a {
-    color: #fff;
+    color: var(--color-white);
 
     &:not(:last-child)::after {
       content: "|";

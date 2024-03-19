@@ -10,14 +10,14 @@ export const Wrapper = styled(motion.nav)`
   display: flex;
   gap: 2em;
   transform: translateX(-50%);
-  font-size: 20px;
+  font-size: var(--text-md);
   
   a {
     opacity: 0.6;
     position: relative;
     padding: 0.5em;
     transition: .3s;
-    color: #fff;
+    color: var(--color-white);
 
     &::before {
       opacity: 0;
