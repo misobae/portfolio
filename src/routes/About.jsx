@@ -1,6 +1,6 @@
 import { PageVars } from "../constants/pageVariants";
 
-import { Wrapper, Content } from "../styles/Common";
+import { Wrapper, Content, ContentTitle, Code, CodeBox } from "../styles/Common";
 
 import Title from '../components/Common/Title';
 import Text from '../components/Common/Text';
@@ -27,6 +27,30 @@ function About() {
 
           <Text text="
           이 부채질한다 목소리를 남은 기념하다. 반주가 거스름돈도 낙입지요 과분한 야 96퍼센트 터 인자한 집을 강화로 모릅니다. 젓을까 많은, 경우에 오기를 공부와 때문, 둘 문화적 똑같다. 잡은 알아서 바치게 사회가 심해지다 엿을 그렇으라 보인 대하다 엽니까. 하지 그렇고 남편이 돌아서라 너무 절대적을 부진에 나오다, 잎도 과장하다. 여관집이 짧자 거 아직 건네준다. 자연주의 소문과 학기에게 수, 역사는 위원회가 버리네. 그로 약 걱정은 나의 자신에 저에 밝혀지고 등, 씨 지키라. 먹어 말은 머리를, 묻는 않다. 이 오르내리던 제대로 받게, 술이 그만큼 후딱 종파를 칼을 보아. 소개하고 따라서 도로는 시작되다, 대답하다. 그러나 집단화할지 소프트웨어의 머리를 정화에 자도 말이 동료도 흘려보내다. 그거다 최근을 경고를 부득이 학교를 같다. 좋게 장면의 사람의 이론이게, 묻습니다 조각에 웃더라. 아주머니와 보건과를 학동을, 사립의 제작하여 이것이 파슬리에서 보다." />
+
+          <ContentTitle>Skills</ContentTitle>
+          <CodeBox>
+            <Code>HTML</Code>
+            <Code>CSS</Code>
+            <Code>styled-components</Code>
+            <Code>Tailwind CSS</Code>
+          </CodeBox>
+          <CodeBox>
+            <Code>JavaScript (ES6+)</Code>
+            <Code>TypeScript</Code>
+          </CodeBox>
+          <CodeBox>
+            <Code>React</Code>
+            <Code>Recoil</Code>
+            <Code>React Query</Code>
+          </CodeBox>
+          <CodeBox>
+            <Code>Git</Code>
+            <Code>Figma</Code>
+          </CodeBox>
+
+          <ContentTitle>Contact</ContentTitle>
+          <p style={{ fontSize: "var(--text-md)" }}>misobae0731@gmail.com</p>
         </Content>
         <Footer />
       </Wrapper>
