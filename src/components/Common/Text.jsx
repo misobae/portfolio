@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { boxMotion } from "../../constants/pageVariants";
 
 export const MotionText = styled(motion.p)`
   margin-bottom: 1.5em;
@@ -11,14 +12,7 @@ export const MotionText = styled(motion.p)`
 function Text({ text }) {
   return (
     <MotionText
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false }}
-      transition={{
-          ease: "easeInOut",
-          duration: 1,
-          y: { duration: 0.5 },
-      }}
+      {...boxMotion}
     >
       {text}
     </MotionText>
