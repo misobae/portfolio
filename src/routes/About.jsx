@@ -1,4 +1,4 @@
-import { PageVars } from "../constants/pageVariants";
+import { pageVars } from "../constants/pageVariants";
 
 import { Wrapper, Content, ContentTitle, Code, CodeBox } from "../styles/Common";
 
@@ -12,7 +12,7 @@ function About() {
       <Wrapper>
         <Title title="About" />
         <Content
-          variants={PageVars}
+          variants={pageVars}
           initial="init"
           animate="ani"
           exit="exit"

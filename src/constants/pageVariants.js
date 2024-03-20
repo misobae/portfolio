@@ -1,4 +1,4 @@
-export const PageVars = {
+export const pageVars = {
   init: {
     zIndex: 0,
     opacity: 0,
@@ -17,4 +17,4 @@ export const PageVars = {
     transform: "translate3d(0, 100px, 0)",
     transition: { type: 'ease', duration: 0.35 }
   }
-}
+};

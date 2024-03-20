@@ -1,4 +1,4 @@
-import { PageVars } from "../constants/pageVariants";
+import { pageVars } from "../constants/pageVariants";
 import projectsData from "../data/projectsData";
 
 import Title from '../components/Common/Title';
@@ -14,7 +14,7 @@ function Projects() {
       <Wrapper>
         <Title title="Projects" />
         <Content
-          variants={PageVars}
+          variants={pageVars}
           initial="init"
           animate="ani"
           exit="exit"
