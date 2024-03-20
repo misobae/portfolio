@@ -12,6 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 		--text-sm: 16px;
 		--text-md: 24px;
 		--text-lg: 32px;
+
+    --layout-width: 1200px;
 	}
 
   * {

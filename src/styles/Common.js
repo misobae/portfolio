@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled(motion.div)`
-  max-width: 1400px;
+  max-width: var(--layout-width);
   min-height: 100%;
   margin: 0 auto;
 `;

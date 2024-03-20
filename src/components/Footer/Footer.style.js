@@ -21,6 +21,6 @@ export const Layout = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  max-width: 1400px;
+  max-width: var(--layout-width);
   margin: 0 auto;
 `;
