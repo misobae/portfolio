@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
+
 import { pageVars } from "../constants/pageVariants";
 import projectsData from "../data/projectsData";
 
+import { Wrapper, Content } from "../styles/Common";
 import Title from '../components/Common/Title';
+
 import ProjectsItem from '../components/Projects/ProjectsItem';
 import { ProjectsWrap } from "../components/Projects/Projects.style";
-import Footer from "../components/Footer/Footer";
 
-import { Wrapper, Content } from "../styles/Common";
 
 function Projects() {
   return (
@@ -21,16 +23,16 @@ function Projects() {
         >
           <ProjectsWrap>
             {projectsData.map((item, i) => (
-              <ProjectsItem
-                key={`item${i}`}
-                imgUrl={item.imgUrl}
-                subTitle={item.subTitle}
-                mainTItle={item.mainTitle}
-              />
+              <Link key={`item${i}`} to={`${item.id}`}>
+                <ProjectsItem
+                  thumbSrc={item.thumbSrc}
+                  tech={item.tech}
+                  title={item.title}
+                />
+              </Link>
             ))}
           </ProjectsWrap>
         </Content>
-        <Footer />
       </Wrapper>
     </>
   )

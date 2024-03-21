@@ -12,6 +12,7 @@ import Experience from "./routes/Experience";
 import Scene from "./components/Scene/Scene";
 import NavFooter from './components/Nav/NavFooter';
 import NavHeader from './components/Nav/NavHeader';
+import ProjectDetail from './routes/ProjectDetail';
 
 const App = () => {
   const location = useLocation();
@@ -34,11 +35,12 @@ const App = () => {
           <Route path="/" element={ <Home /> } />
           <Route path="/about" element={ <About /> } />
           <Route path="/projects" element={ <Projects /> } />
+          <Route path="/projects/:projectId" element={<ProjectDetail />} />
           <Route path="/experience" element={ <Experience /> } />
         </Routes>
       </AnimatePresence>
 
-      <Suspense>
+      <Suspense fallback={<div>loading...</div>}>
         <Scene />
       </Suspense>
     </>
