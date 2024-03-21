@@ -7,11 +7,12 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./routes/Home";
 import About from "./routes/About";
 import Projects from "./routes/Projects";
+import ProjectDetail from './routes/ProjectDetail';
 import Experience from "./routes/Experience";
+import NotFound from './routes/NotFound';
 
 import NavFooter from './components/Nav/NavFooter';
 import NavHeader from './components/Nav/NavHeader';
-import ProjectDetail from './routes/ProjectDetail';
 import Footer from './components/Footer/Footer';
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/projects" element={ <Projects /> } />
           <Route path="/projects/:projectId" element={<ProjectDetail />} />
           <Route path="/experience" element={ <Experience /> } />
+          <Route path="/*" element={ <NotFound /> } />
         </Routes>
       </AnimatePresence>
 
