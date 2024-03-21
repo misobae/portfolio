@@ -5,7 +5,7 @@ export const Item = styled(motion.div)`
   overflow: hidden;
   position: relative;
   height: 0;
-  padding-top: 55%;
+  padding-top: 70%;
   cursor: pointer;
   
   img {
@@ -20,8 +20,8 @@ export const Item = styled(motion.div)`
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 870px;
-    height: 870px;
+    width: 800px;
+    height: 800px;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     transform: translate(-50%, -50%);
     transition: ease .5s;
@@ -34,7 +34,7 @@ export const Item = styled(motion.div)`
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 20%;
+    height: 70px;
     padding: 1em;
     background: rgba(0, 0, 0, .7);
     transition: ease .3s;
