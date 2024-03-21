@@ -3,11 +3,6 @@ import { motion } from "framer-motion";
 
 export const Wrapper = styled.div`
   overflow: hidden;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
   width: 100vw;
   min-height: 100%;
   padding: 5% 0 0;

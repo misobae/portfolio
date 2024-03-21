@@ -5,7 +5,6 @@ import { CodeBox } from "../../styles/Common";
 export const ExperienceWrap = styled.div`
   display: flex;
   gap: 5%;
-  margin-bottom: 120px;
 `;
 
 export const ExperienceTitle = styled(motion.div)`
