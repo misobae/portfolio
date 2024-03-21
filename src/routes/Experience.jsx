@@ -1,9 +1,7 @@
 import { expCunextData, expFreeData } from "../data/experienceData";
-
 import { pageVars, boxMotion } from "../constants/pageVariants";
 
 import Title from '../components/Common/Title';
-import Footer from "../components/Footer/Footer";
 
 import { Wrapper, Content, Code } from "../styles/Common";
 import { 
@@ -106,7 +104,6 @@ function Experience() {
             </ExperienceList>
           </ExperienceWrap>
         </Content>
-        <Footer />
       </Wrapper>
     </>
   )

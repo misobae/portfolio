@@ -4,7 +4,6 @@ import { Wrapper, Content, ContentTitle, Code, CodeBox } from "../styles/Common"
 
 import Title from '../components/Common/Title';
 import Text from '../components/Common/Text';
-import Footer from "../components/Footer/Footer";
 
 function About() {
   return (
@@ -52,7 +51,6 @@ function About() {
           <ContentTitle>Contact</ContentTitle>
           <p style={{ fontSize: "var(--text-md)" }}>misobae0731@gmail.com</p>
         </Content>
-        <Footer />
       </Wrapper>
     </>
   )

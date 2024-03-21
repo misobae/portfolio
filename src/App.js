@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { lightState } from './state/atoms';
 import { Routes, Route, useLocation } from "react-router-dom";
@@ -9,10 +9,10 @@ import About from "./routes/About";
 import Projects from "./routes/Projects";
 import Experience from "./routes/Experience";
 
-import Scene from "./components/Scene/Scene";
 import NavFooter from './components/Nav/NavFooter';
 import NavHeader from './components/Nav/NavHeader';
 import ProjectDetail from './routes/ProjectDetail';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const location = useLocation();
@@ -40,9 +40,7 @@ const App = () => {
         </Routes>
       </AnimatePresence>
 
-      <Suspense fallback={<div>loading...</div>}>
-        <Scene />
-      </Suspense>
+      {isHome ? null : <Footer/>}
     </>
   );
 };
