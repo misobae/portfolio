@@ -1,3 +1,4 @@
+import MetaTag from "../SEOMetaTag";
 import { Link } from "react-router-dom";
 
 import { pageVars } from "../constants/pageVariants";
@@ -13,6 +14,14 @@ import { ProjectsWrap } from "../components/Projects/Projects.style";
 function Projects() {
   return (
     <>
+      <MetaTag
+        title="Projects - misobae"
+        description="FrontEnd Developer Miso&#x27;s Web - Projects page" 
+        keywords="portfolio, FrontEnd, Projects, Web Projects"
+        imgsrc={`https://misobae.github.io/portfolio/meta-img.jpg`}
+        url="https://misobae.github.io/portfolio/" 
+      />
+
       <Wrapper>
         <Title title="Projects" />
         <Content

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from "react-router-dom";
+import MetaTag from './SEOMetaTag';
 import { useRecoilState } from 'recoil';
 import { lightState } from './state/atoms';
-import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Home from "./routes/Home";
@@ -31,6 +32,14 @@ const App = () => {
 
   return (
     <>
+      <MetaTag
+        title="misobae" 
+        description="FrontEnd Developer Miso&#x27;s Web" 
+        keywords="portfolio, FrontEnd"
+        imgsrc={`https://misobae.github.io/portfolio/meta-img.jpg`}
+        url="https://misobae.github.io/portfolio/" 
+      />
+
       {isHome ? <NavFooter/> : <NavHeader/>}
 
       <Loading />

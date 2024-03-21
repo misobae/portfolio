@@ -1,3 +1,4 @@
+import MetaTag from '../SEOMetaTag';
 import { useParams } from 'react-router-dom';
 
 import { pageVars } from "../constants/pageVariants";
@@ -11,47 +12,57 @@ function ProjectDetail() {
   const id = params.projectId;
   
   return (
-    <Wrapper>
-      <Content
-        variants={pageVars}
-        initial="init"
-        animate="ani"
-        exit="exit"
-      >
-        <ProjectTitle>
-          <h2 className='title'>{projectsData[id].title}</h2>
-          <div className='others'>
-            <span className='others__date'>{projectsData[id].date}</span>
-            <div className='others__links'>
-              <a target="_blank" rel="noopener noreferrer" href={projectsData[id].github}>GITHUB</a>
-              <a target="_blank" rel="noopener noreferrer" href={projectsData[id].deployed}>DEPLOYED LINK</a>
-              <a target="_blank" rel="noopener noreferrer" href={projectsData[id].blog}>BLOG</a>
+    <>
+      <MetaTag
+        title={`${projectsData[id].title} - misobae`} 
+        description="FrontEnd Developer Miso&#x27;s Web - Project page" 
+        keywords="portfolio, FrontEnd, Project, Web Project"
+        imgsrc={`https://misobae.github.io/portfolio/meta-img.jpg`}
+        url="https://misobae.github.io/portfolio/" 
+      />
+
+      <Wrapper>
+        <Content
+          variants={pageVars}
+          initial="init"
+          animate="ani"
+          exit="exit"
+        >
+          <ProjectTitle>
+            <h2 className='title'>{projectsData[id].title}</h2>
+            <div className='others'>
+              <span className='others__date'>{projectsData[id].date}</span>
+              <div className='others__links'>
+                <a target="_blank" rel="noopener noreferrer" href={projectsData[id].github}>GITHUB</a>
+                <a target="_blank" rel="noopener noreferrer" href={projectsData[id].deployed}>DEPLOYED LINK</a>
+                <a target="_blank" rel="noopener noreferrer" href={projectsData[id].blog}>BLOG</a>
+              </div>
             </div>
-          </div>
-        </ProjectTitle>
+          </ProjectTitle>
 
-        <p>{projectsData[id].summary}</p>
+          <p>{projectsData[id].summary}</p>
 
-        <ProjectImg>
-          <img src={projectsData[id].imgSrc} alt='프로젝트 이미지' />
-        </ProjectImg>
+          <ProjectImg>
+            <img src={projectsData[id].imgSrc} alt='프로젝트 이미지' />
+          </ProjectImg>
 
-        <ContentTitle>Tech Stacks</ContentTitle>
-        <CodeBox>
-          {projectsData[id].tech.map((item, idx) => (
-            <Code key={"tech" + idx}>{item}</Code>
+          <ContentTitle>Tech Stacks</ContentTitle>
+          <CodeBox>
+            {projectsData[id].tech.map((item, idx) => (
+              <Code key={"tech" + idx}>{item}</Code>
+            ))}
+          </CodeBox>
+
+          <ContentTitle>Features</ContentTitle>
+          {projectsData[id].featureTitle.map((item, idx) => (
+            <List key={"feat" + idx}>
+              <h4 className='title'>{item}</h4>
+              <p className='item'>{projectsData[id].featureDesc[idx]}</p>
+            </List>
           ))}
-        </CodeBox>
-
-        <ContentTitle>Features</ContentTitle>
-        {projectsData[id].featureTitle.map((item, idx) => (
-          <List key={"feat" + idx}>
-            <h4 className='title'>{item}</h4>
-            <p className='item'>{projectsData[id].featureDesc[idx]}</p>
-          </List>
-        ))}
-      </Content>
-    </Wrapper>
+        </Content>
+      </Wrapper>
+    </>
   )
 }
 

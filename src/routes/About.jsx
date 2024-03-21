@@ -1,3 +1,5 @@
+import MetaTag from "../SEOMetaTag";
+
 import { pageVars } from "../constants/pageVariants";
 
 import { Wrapper, Content, ContentTitle, Code, CodeBox } from "../styles/Common";
@@ -5,9 +7,17 @@ import { Wrapper, Content, ContentTitle, Code, CodeBox } from "../styles/Common"
 import Title from '../components/Common/Title';
 import Text from '../components/Common/Text';
 
+
 function About() {
   return (
     <>
+      <MetaTag
+        title="About - misobae" 
+        description="FrontEnd Developer Miso&#x27;s Web - About page" 
+        keywords="portfolio, FrontEnd, About"
+        imgsrc={`https://misobae.github.io/portfolio/meta-img.jpg`}
+        url="https://misobae.github.io/portfolio/" 
+      />
       <Wrapper>
         <Title title="About" />
         <Content

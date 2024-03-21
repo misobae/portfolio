@@ -1,3 +1,5 @@
+import MetaTag from "../SEOMetaTag";
+
 import { expCunextData, expFreeData } from "../data/experienceData";
 import { pageVars, boxMotion } from "../constants/pageVariants";
 
@@ -17,6 +19,14 @@ function Experience() {
 
   return (
     <>
+      <MetaTag
+        title="Experience - misobae" 
+        description="FrontEnd Developer Miso&#x27;s Web - Experience page" 
+        keywords="portfolio, FrontEnd, Experience"
+        imgsrc={`https://misobae.github.io/portfolio/meta-img.jpg`}
+        url="https://misobae.github.io/portfolio/" 
+      />
+
       <Wrapper>
         <Title title="Experience" />
         <Content
