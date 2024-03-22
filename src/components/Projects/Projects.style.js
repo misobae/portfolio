@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import device from "../../styles/responsive";
 
 export const ProjectsWrap = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4.5vw;
+
+  @media ${device.tablet} {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const ProjectTitle = styled.div`
@@ -19,9 +24,9 @@ export const ProjectTitle = styled.div`
     font-size: 80px;
     font-weight: 700;
     letter-spacing: -0.01em;
-    text-align: center;
   }
   .others {
+    flex-shrink: 0;
     text-align: right;
 
     .others__date {
@@ -37,6 +42,36 @@ export const ProjectTitle = styled.div`
         font-size: var(--text-sm);
         text-decoration: underline;
         text-underline-offset: 3px;
+      }
+    }
+  }
+
+  @media ${device.tablet} {
+    .title {
+      font-size: 48px;
+    }
+
+    .others {
+      .others__date {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media ${device.mobile} {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .others {
+      .others__date {
+        margin-top: 32px;
+        text-align: left;
+      }
+      .others__links {
+        a {
+          margin-left: 0;
+          margin-right: 1.5em;
+        }
       }
     }
   }

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import device from "../../styles/responsive";
 
 const MenuTitle = styled(motion.div)`
     padding: 56px 0 80px;
@@ -8,6 +9,16 @@ const MenuTitle = styled(motion.div)`
     font-weight: 700;
     letter-spacing: -0.01em;
     text-align: center;
+
+    @media ${device.tablet} {
+      font-size: 80px;
+      padding: 56px 0;
+    }
+
+    @media ${device.mobile} {
+      font-size: calc(36px + 3.5vw);
+      padding: 56px 0 48px;
+    }
 `;
 
 function Title({ title }) {

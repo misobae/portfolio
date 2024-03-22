@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoader } from '@react-three/fiber';
+import { useLoader, useThree } from '@react-three/fiber';
 import { Center, Text3D } from '@react-three/drei';
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 
@@ -22,9 +22,12 @@ function Text() {
     name("Roughness"),
     name("Metalness")
   ]);
+
+  const { viewport } = useThree();
+  const scalingFactor = Math.min(Math.max(viewport.aspect / 2, 0.7), 1.1);
   
   return (
-    <Center scale={1}>
+    <Center scale={scalingFactor}>
       <Text3D
         font={`${process.env.PUBLIC_URL}/fonts/Source_Sans_3_SemiBold_Regular.json`}
         size={1.2}

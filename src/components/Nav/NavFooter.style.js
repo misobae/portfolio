@@ -1,6 +1,7 @@
 
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import device from "../../styles/responsive";
 
 export const Wrapper = styled(motion.nav)`
   position: absolute;
@@ -11,6 +12,10 @@ export const Wrapper = styled(motion.nav)`
   gap: 2em;
   transform: translateX(-50%);
   font-size: var(--text-md);
+
+  @media ${device.mobile} {
+    gap: 1em;
+  }
   
   a {
     opacity: 0.6;

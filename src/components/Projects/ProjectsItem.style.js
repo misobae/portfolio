@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import device from "../../styles/responsive";
 
 export const Item = styled(motion.div)`
   overflow: hidden;
@@ -43,6 +44,7 @@ export const Item = styled(motion.div)`
       margin-bottom: 0.5em;
       color: var(--color-gray);
       font-size: 14px;
+      word-break: keep-all;
     }
     .title__main {
       color: var(--color-white);
@@ -51,5 +53,18 @@ export const Item = styled(motion.div)`
   }
   &:hover .title {
     opacity: 1;
+  }
+
+  @media ${device.tablet} {
+    .overlay {
+      opacity: 0;
+    }
+    .title {
+      opacity: 1;
+
+      .title__sub {
+        font-size: 12px;
+      }
+    }
   }
 `;

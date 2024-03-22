@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import reset from 'styled-reset'
+import reset from 'styled-reset';
+import device from "./responsive";
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -14,6 +15,15 @@ export const GlobalStyle = createGlobalStyle`
 		--text-lg: 32px;
 
     --layout-width: 1200px;
+
+    @media ${device.tablet} {
+      --text-sm: 15px;
+      --text-md: 20px;
+    }
+    @media ${device.mobile} {
+      --text-md: 18px;
+      --text-lg: 28px;
+    }
 	}
 
   * {
@@ -45,5 +55,10 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+  }
+
+  p {
+    line-height: 1.4;
+    word-break: keep-all;
   }
 `;

@@ -1,10 +1,19 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { CodeBox } from "../../styles/Common";
+import device from "../../styles/responsive";
 
 export const ExperienceWrap = styled.div`
   display: flex;
   gap: 5%;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+
+    &:not(:first-child) {
+      margin-top: 56px;
+    }
+  }
 `;
 
 export const ExperienceTitle = styled(motion.div)`
@@ -18,6 +27,15 @@ export const ExperienceTitle = styled(motion.div)`
   span {
     color: var(--color-gray);
   }
+
+  @media ${device.tablet} {
+    flex: auto 0 0;
+    margin-bottom: 2em;
+    strong {
+      margin-bottom: 0.25em;
+      font-size: var(--text-lg);
+    }
+  }
 `;
 
 export const ExperienceList = styled.div`
@@ -29,6 +47,10 @@ export const ExperienceList = styled.div`
     font-weight: 500;
     letter-spacing: -0.03em;
   }
+  @media ${device.tablet} {
+    flex: 100% 1 1;
+    padding-left: 5%;
+  }
 `;
 
 export const ExperienceItem = styled(motion.div)`
@@ -36,6 +58,13 @@ export const ExperienceItem = styled(motion.div)`
     border-bottom: 1px solid var(--color-gray);
     margin-bottom: 48px;
     padding-bottom: 32px;
+  }
+
+  @media ${device.tablet} {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+    }
   }
 `;
 

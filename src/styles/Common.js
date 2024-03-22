@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 export const Wrapper = styled.div`
   overflow: hidden;
   width: 100vw;
-  min-height: 100%;
+  min-height: 100vh;
   padding: 5% 0 0;
   transition: .8s ease-in-out;
 `;
 
 export const Content = styled(motion.div)`
+  width: 90%;
   max-width: var(--layout-width);
   min-height: 100%;
   margin: 0 auto;
