@@ -51,6 +51,12 @@ export const ExperienceList = styled.div`
     flex: 100% 1 1;
     padding-left: 5%;
   }
+  @media ${device.mobile} {
+    h3 {
+      margin-bottom: 0.5em;
+      font-size: 22px;
+    }
+  }
 `;
 
 export const ExperienceItem = styled(motion.div)`
@@ -63,7 +69,7 @@ export const ExperienceItem = styled(motion.div)`
   @media ${device.tablet} {
     &:not(:last-child) {
       margin-bottom: 40px;
-      padding-bottom: 24px;
+      padding-bottom: 12px;
     }
   }
 `;
@@ -97,6 +103,15 @@ export const ExperienceCont = styled.div`
         border: 1px solid var(--color-white);
         flex-shrink: 0;
       }
+    }
+  }
+
+  @media ${device.mobile} {
+    min-height: auto;
+    margin-bottom: 32px;
+    strong {
+      display: block;
+      margin-bottom: 0.5em;
     }
   }
 `;
