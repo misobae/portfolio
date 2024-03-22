@@ -10,11 +10,12 @@ Title: 765016 Loft Lightstar pendant lamp
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export default function Lamp(props) {
-  const { nodes, materials } = useGLTF(`${process.env.PUBLIC_URL}/lamp/scene.gltf`)
+export default function Lamp() {
+  const { nodes, materials } = useGLTF(`${process.env.PUBLIC_URL}/lamp/scene.gltf`);
+
   return (
     <>
-      <group {...props} dispose={null}>
+      <group position-y={2.5} scale={0.003}  dispose={null}>
       <group position={[0, -164.271, 0]} scale={1.06}>
         <group position={[-39.681, 65.215, -2.213]}>
           <mesh geometry={nodes.Plafon_001_Metal_Med_0.geometry} material={materials.Metal_Med} />
