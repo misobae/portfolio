@@ -15,8 +15,6 @@ import NotFound from './routes/NotFound';
 import NavFooter from './components/Nav/NavFooter';
 import NavHeader from './components/Nav/NavHeader';
 import Footer from './components/Footer/Footer';
-import Loading from './components/Loading/Loading';
-
 
 const App = () => {
   const location = useLocation();
@@ -41,8 +39,6 @@ const App = () => {
       />
 
       {isHome ? <NavFooter/> : <NavHeader/>}
-
-      <Loading />
 
       <AnimatePresence mode='wait'>
         <Routes location={location} key={location.pathname}>
