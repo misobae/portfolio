@@ -7,6 +7,10 @@ export const ExperienceWrap = styled.div`
   display: flex;
   gap: 5%;
 
+  &:not(:first-child) {
+    margin-top: 88px;
+  }
+
   @media ${device.tablet} {
     flex-direction: column;
 
@@ -80,6 +84,7 @@ export const ExperienceCont = styled.div`
   strong {
     display: inline-block;
     width: 120px;
+    font-size: 15px;
     font-family: "Noto Sans KR", sans-serif;
     font-weight: 600;
     letter-spacing: -0.03em;
